@@ -1,4 +1,3 @@
-// Get starttime
 const startTime = new Date().getTime();
 const dayNumber = '01';
 
@@ -6,7 +5,6 @@ const dayNumber = '01';
 const fs = require('fs');
 const path = require('path');
 const appData = fs.readFileSync(path.resolve(__dirname, `day-${dayNumber}.txt`), 'utf8').split('\n');
-console.log('appData:', appData);
 
 // part 1
 let numberOfIncreasedValues = 0;
@@ -55,8 +53,5 @@ for (let i = 0; i < appData.length - 2; i += 1) {
 
 console.log('Solution part 2: number of increased values', numberOfIncreasedValues);
 
-// Get endtime
 const endTime = new Date().getTime();
-
-// Get execution time
 console.log('Execution time:', endTime - startTime, 'ms');
